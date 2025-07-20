@@ -46,6 +46,7 @@
     "@keystonejs/server-side-graphql-client": "^1.1.2",
     "@types/nodemailer": "^6.4.0",
     "body-parser": "^2.2.0",
+    "caniuse-lite": "^1.0.30001727",
     "dotenv": "^8.2.0",
     "express": "^5.1.0",
     "extract-files": "^13.0.0",
