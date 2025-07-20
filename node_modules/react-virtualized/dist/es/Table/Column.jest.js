@@ -62,7 +62,7 @@ describe('Column', function () {
         dataKey: 'foo',
         label: 'squirrel'
       })[0].props.children).toEqual('squirrel');
-      var label = React.createElement("div", {
+      var label = /*#__PURE__*/React.createElement("div", {
         className: "rabbit"
       }, "Rabbit");
       expect(defaultHeaderRenderer({
