@@ -46,7 +46,7 @@ export async function sendPasswordResetEmail(
   const info = (await transport.sendMail({
     to,
     from: 'devsadikbd@gmail.com',
-    subject: 'set your password',
+    subject: 'Hey gorib',
     html: makeANiceEmail(`
         <p>Your password is:</p>
       <a href="${process.env.FRONTEND_URL}/reset?token=${resetToken}">Click here to set your password</a>

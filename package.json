@@ -5,8 +5,8 @@
   "author": "Wes Bos",
   "license": "MIT",
   "scripts": {
-    "dev": "keystone-next",
-    "seed-data": "keystone-next --seed-data"
+    "dev": "NODE_OPTIONS='--no-deprecation' keystone-next",
+    "seed-data": "NODE_OPTIONS='--no-deprecation' keystone-next --seed-data"
   },
   "eslintConfig": {
     "extends": "wesbos/typescript.js",
