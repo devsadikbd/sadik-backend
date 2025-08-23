@@ -18,4 +18,10 @@ export const permissions = {
     return session?.data.name.includes('sadik');
   },
 };
-export const rules = {};
+export const rules = {
+  canManageProducts({ session }) {
+    if (permissions.canManageProducts({ session })) {
+      return true;
+    }
+  },
+};
