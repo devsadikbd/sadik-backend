@@ -18,3 +18,4 @@ export const permissions = {
     return session?.data.name.includes('sadik');
   },
 };
+export const rules = {};

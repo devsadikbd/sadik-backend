@@ -21,17 +21,20 @@ A KeystoneJS backend application with GraphQL API for e-commerce functionality.
 ## Getting Started
 
 1. Install dependencies:
+
    ```bash
    npm install
    ```
 
 2. Set up environment variables:
+
    ```bash
    cp .env.example .env
    # Edit .env with your configuration
    ```
 
 3. Start development server:
+
    ```bash
    npm run dev
    ```
