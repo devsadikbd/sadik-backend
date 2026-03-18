@@ -79,5 +79,8 @@
   "engines": {
     "node": ">=14.0.0"
   },
+  "overrides": {
+    "undici": "^5.28.4"
+  },
   "repository": "https://github.com/devsadikb/advanced-react"
 }
