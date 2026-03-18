@@ -19,6 +19,12 @@ import { permissionsList } from "./schemas/fields";
 
 const databaseURL =
   process.env.DATABASE_URL || "mongodb://localhost:27017/sadik";
+const frontendOrigins = (
+  process.env.FRONTEND_URLS || process.env.FRONTEND_URL || ""
+)
+  .split(",")
+  .map((origin) => origin.trim())
+  .filter(Boolean);
 const sessionConfig = {
   MaxAge: 60 * 60 * 24 * 365,
   secret: process.env.COOKIE_SECRET || "a-very-secure-secret",
@@ -40,7 +46,7 @@ export default withAuth(
   config({
     server: {
       cors: {
-        origin: [process.env.FRONTEND_URL],
+        origin: frontendOrigins,
         credentials: true,
       },
     },
