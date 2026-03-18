@@ -6,6 +6,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "NODE_OPTIONS='--openssl-legacy-provider' keystone-next",
+    "build": "NODE_OPTIONS='--openssl-legacy-provider' keystone-next build",
+    "start": "NODE_OPTIONS='--openssl-legacy-provider' keystone-next start",
     "seed-data": "NODE_OPTIONS='--no-deprecation' keystone-next --seed-data",
     "postinstall": "node scripts/patch-apollo-upload-client.js"
   },
@@ -49,7 +51,6 @@
     "body-parser": "^2.2.0",
     "dotenv": "^8.2.0",
     "express": "^5.1.0",
-    "extract-files": "^11.0.0",
     "next": "^10.0.5",
     "nodemailer": "^6.4.17",
     "postcss": "^8.4.31",
