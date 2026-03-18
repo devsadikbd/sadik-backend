@@ -19,19 +19,5 @@
   "prettier.disableLanguages": [
     "javascript",
     "javascriptreact"
-  ],
-  "sqltools.connections": [
-    {
-      "ssh": "Disabled",
-      "previewLimit": 50,
-      "server": "localhost",
-      "port": 5432,
-      "driver": "PostgreSQL",
-      "name": "devsadikbd",
-      "group": "PostgreSQL",
-      "database": "devsadikbd",
-      "username": "devsadikbd_user",
-      "password": "Sadik@2000"
-    }
   ]
 }
