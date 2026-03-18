@@ -5,7 +5,8 @@ import { isSignedIn } from '../access';
 export const Product = list({
   access: {
     create: isSignedIn,
-    read: isSignedIn,
+    // Storefront product queries need to work before login.
+    read: () => true,
     update: isSignedIn,
     delete: isSignedIn,
   },
