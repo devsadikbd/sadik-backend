@@ -38,7 +38,9 @@ const { withAuth } = createAuth({
   },
   passwordResetLink: {
     async sendToken(args) {
-      await sendPasswordResetEmail(args.token, args.identity);
+      // Extract username from email or use a default
+      const username = args.identity.split('@')[0] || 'User';
+      await sendPasswordResetEmail(args.token, args.identity, username);
     },
   },
 });

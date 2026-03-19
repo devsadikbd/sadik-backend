@@ -8,7 +8,7 @@ const transport = createTransport({
     pass: process.env.MAIL_PASS,
   },
 });
-function makeANiceEmail(text: string): string {
+function makeANiceEmail(text: string, username: string = 'Admin'): string {
   return `
     <div style="
     border: 1px solid black;
@@ -19,7 +19,7 @@ function makeANiceEmail(text: string): string {
     ">
     <h2>Hello There please set your password</h2>
     <p>${text}</p>
-    <p>😘, Sadik</p>
+    <p>😘, ${username}</p>
     </div>
   `;
 }
@@ -41,7 +41,8 @@ export interface Envelope {
 
 export async function sendPasswordResetEmail(
   resetToken: string,
-  to: string
+  to: string,
+  username: string = 'Admin'
 ): Promise<void> {
   const info = (await transport.sendMail({
     to,
@@ -50,7 +51,7 @@ export async function sendPasswordResetEmail(
     html: makeANiceEmail(`
         <p>Your password is:</p>
       <a href="${process.env.FRONTEND_URL}/reset?token=${resetToken}">Click here to set your password</a>
-    `),
+    `, username),
   })) as MailResponse;
   if (process.env.MAIL_USER.includes('gmail.com')) {
     console.log(`Message sent: ${getTestMessageUrl(info)}`);
