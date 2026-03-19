@@ -9,7 +9,7 @@
     "build": "NODE_OPTIONS='--openssl-legacy-provider' keystone-next build",
     "start": "NODE_OPTIONS='--openssl-legacy-provider' keystone-next start",
     "seed-data": "NODE_OPTIONS='--no-deprecation' keystone-next --seed-data",
-    "postinstall": "node scripts/patch-apollo-upload-client.js"
+    "postinstall": "node -e \"const path=require('path'); const script=path.resolve(process.env.INIT_CWD || process.cwd(), 'scripts/patch-apollo-upload-client.js'); require(script);\""
   },
   "eslintConfig": {
     "extends": "wesbos/typescript.js",

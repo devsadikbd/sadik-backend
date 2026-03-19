@@ -45,7 +45,7 @@ export async function sendPasswordResetEmail(
 ): Promise<void> {
   const info = (await transport.sendMail({
     to,
-    from: 'devsadikbd@gmail.com',
+    from: 'admin@devsadik.me',
     subject: 'Hey gorib',
     html: makeANiceEmail(`
         <p>Your password is:</p>
